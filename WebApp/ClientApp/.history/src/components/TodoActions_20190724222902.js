@@ -3,13 +3,13 @@ import { Fab } from '@material-ui/core';
 import 'typeface-roboto';
 import DeleteIcon from '@material-ui/icons/Delete'
 import AddToListButton from './AddToListButton';
-import addToList from './AddToList'
 
-const [checkedIds, setCheckedIds] = useState([]);
 
-const hasSelectedIds = checkedIds.length > 0;
+// hooks
 
 const TodoActions = (props)=>{
+    const classes = useStyles();
+
     return(<>
         <AddToListButton />
         <Fab disabled={!hasSelectedIds}>

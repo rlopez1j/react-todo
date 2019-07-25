@@ -4,8 +4,14 @@ import { Container, Typography, CssBaseline,
 import TodoList from './TodoListList'
 import TodoActions from './TodoActions';
 
+
+let id = 2;
+
 const Todo = (props) => {
     // hooks
+    const [checkedIds, setCheckedIds] = useState([]);
+
+    const hasSelectedIds = checkedIds.length > 0;
     return (
         <>
             <CssBaseline />

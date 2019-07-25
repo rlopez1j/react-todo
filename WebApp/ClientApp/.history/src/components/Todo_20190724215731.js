@@ -6,6 +6,9 @@ import TodoActions from './TodoActions';
 
 const Todo = (props) => {
     // hooks
+    const [checkedIds, setCheckedIds] = useState([]);
+
+    const hasSelectedIds = checkedIds.length > 0;
     return (
         <>
             <CssBaseline />
